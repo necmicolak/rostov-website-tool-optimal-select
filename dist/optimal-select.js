@@ -1313,7 +1313,7 @@ function findAttributesPattern(priority, element, ignore) {
         pattern = '#' + attributeValue;
       }
 
-      if (attributeName === 'class') {
+      if (attributeName === 'class' && element.classList.length > 0) {
         var className = attributeValue.trim().replace(/\s+/g, '.');
         pattern = '.' + className;
       }
