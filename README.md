@@ -1,5 +1,9 @@
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
+# WARNING: Fork
+
+This is a fork of the main library. Please consider using that instead.
+
 # optimal select
 
 A library which creates efficient and robust CSS selectors for HTML elements.
@@ -31,7 +35,7 @@ import { select } from 'optimal-select' // global: 'OptimalSelect'
 
 document.addEventListener('click', (e) => {
   var selector = select(e.target)
-  console.log(selector)  
+  console.log(selector)
 })
 ```
 
