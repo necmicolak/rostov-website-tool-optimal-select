@@ -162,15 +162,17 @@ function findAttributesPattern (priority, element, ignore) {
 
     var pattern = `[${attributeName}="${attributeValue}"]`
 
-    if ((/\b\d/).test(attributeValue) === false) {
-      if (attributeName === 'id') {
-        pattern = `#${attributeValue}`
-      }
+    if (attributeName === 'id') {
+      pattern = `#${attributeValue}`
+    }
 
-      if (attributeName === 'class' && element.classList.length > 0) {
-        const className = attributeValue.trim().replace(/\s+/g, '.')
-        pattern = `.${className}`
+    if (attributeName === 'class') {
+      // If there aren't actually any classes, skip.
+      if (element.classList.length === 0) {
+        continue;
       }
+      const className = attributeValue.trim().replace(/\s+/g, '.')
+      pattern = `.${className}`
     }
 
     return pattern
