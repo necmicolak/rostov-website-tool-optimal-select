@@ -1,10 +1,10 @@
 {
   "name": "@movable/optimal-select",
   "description": "Get efficient & robust CSS selectors for HTML elements",
-  "version": "4.1.0",
-  "author": "Stefan Dühring | Autarc <autarc@gmail.com>",
+  "version": "4.1.1",
+  "author": "Movable Ink <dev@movableink.com>",
   "bugs": {
-    "url": "https://github.com/movableink/optimal-select/issues"
+    "url": "https://github.com/movableink/optimal-select/"
   },
   "devDependencies": {
     "babel-loader": "^6.2.5",
