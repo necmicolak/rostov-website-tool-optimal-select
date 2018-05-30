@@ -171,8 +171,13 @@ function findAttributesPattern (priority, element, ignore) {
       if (element.classList.length === 0) {
         continue;
       }
-      const className = attributeValue.trim().replace(/\s+/g, '.')
-      pattern = `.${className}`
+      const validClassNames = attributeValue.trim().split(/\s+/).filter((val) => {
+        return /\D/.test(val[0]);
+      });
+      
+      if (validClassNames.length === 0) continue;
+      
+      pattern = `.${validClassNames.join('.')}`
     }
 
     return pattern
