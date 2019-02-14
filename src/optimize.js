@@ -127,8 +127,8 @@ function optimizePart (prePart, current, postPart, elements) {
                                          .map((name) => `.${name}`)
                                          .sort((curr, next) => curr.length - next.length)
     while (names.length) {
-      const reg = new RegExp(`( )(${names.shift()})( |$)`);
-      const partial = current.split('.').join(' .').replace(reg,'').split(' ').filter(Boolean).join('');
+      names = names.slice(1);
+      const partial = names.join('');
 
       var pattern = `${prePart}${partial}${postPart}`.trim()
       if (!pattern.length || pattern.charAt(0) === '>' || pattern.charAt(pattern.length-1) === '>') {
