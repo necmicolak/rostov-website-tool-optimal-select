@@ -1,5 +1,5 @@
 {
-  "name": "@apsisinternational/optimal-select",
+  "name": "@necmicolak/optimal-select",
   "description": "Get efficient & robust CSS selectors for HTML elements",
   "version": "4.2.2",
   "scripts": {
